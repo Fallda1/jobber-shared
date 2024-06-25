@@ -18,8 +18,8 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "9_jobber_shared",
-  "author": "",
+  "name": "@Fallda1/jobberShared",
+  "author": "Haoxu Zhan",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Fallda1/jobberShared.git"
