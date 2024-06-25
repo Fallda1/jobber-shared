@@ -18,11 +18,11 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@Fallda1/jobberShared",
+  "name": "@Fallda1/jobber-shared",
   "author": "Haoxu Zhan",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fallda1/jobberShared.git"
+    "url": "git+https://github.com/Fallda1/jobber-shared.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
