@@ -25,7 +25,7 @@
     "url": "git+https://github.com/Fallda1/jobber-shared.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/"
   },
   "files": [
     "build",
