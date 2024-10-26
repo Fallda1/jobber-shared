@@ -4,16 +4,16 @@ import { NotAuthorizedError } from './error_handler';
 
 const tokens: string[] = ['auth', 'seller', 'gig, search', 'buyer', 'message', 'order', 'review'];
 
-export function verifyGatewayRequest(req: Request, res: Response, next: NextFunction): void {
-    if (!req.headers?.gatewayToken) {
+export function verifyGatewayRequest(req: Request, _res: Response, next: NextFunction): void {
+    if (!req.headers?.gatewaytoken) {
         throw new NotAuthorizedError('Invalid request', 'Request not from API gateway')
     }
-    const token: string = req.headers?.gatewayToken as string;
+    const token: string = req.headers?.gatewaytoken as string;
     if (!token) {
         throw new NotAuthorizedError('Invalid request', 'Request not from API gateway')
     }
     try {
-        const payload: { id: string; iat: number } = JWT.verify(token, '') as
+        const payload: { id: string; iat: number } = JWT.verify(token, '1282722b942e08c8a6cb033aa6ce850e') as
             { id: string; iat: number };
         if (!tokens.includes(payload.id)) {
             throw new NotAuthorizedError('Invalid request', 'Request payload is invalid')
@@ -21,4 +21,5 @@ export function verifyGatewayRequest(req: Request, res: Response, next: NextFunc
     } catch (error) {
         throw new NotAuthorizedError('Invalid request', 'Request not from API gateway')
     }
+    next();
 }
