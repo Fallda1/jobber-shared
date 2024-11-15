@@ -75,7 +75,7 @@ export {
 
 } from './seller.interface';
 export {
-    uploads, videoUpload
+    uploads, videoUpload, configureCloudinary
 } from './cloudinary_upload'
 export {
     IErrorResponse,
