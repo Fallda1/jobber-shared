@@ -95,5 +95,5 @@ export {
     winstonLogger
 } from './logger'
 export {
-    firstLetterUppercase, lowerCase, toUpperCase, isEmail, isDataURL
+    firstLetterUppercase, lowerCase, toUpperCase, isEmail, isDataURL, determineDeviceType
 } from './helpers'

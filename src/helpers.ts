@@ -28,3 +28,13 @@ export function isDataURL(value: string): boolean {
         /^\s*data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@\\/?%\s]*)\s*$/i;
     return dataUrlRegex.test(value);
 }
+
+export function determineDeviceType(userAgent: string | undefined): string {
+    if (!userAgent) return 'Unknown';
+
+    const ua = userAgent.toLowerCase();
+
+    if (/mobile/i.test(ua)) return 'Mobile';
+    if (/tablet/i.test(ua)) return 'Tablet';
+    return 'Desktop';
+}
